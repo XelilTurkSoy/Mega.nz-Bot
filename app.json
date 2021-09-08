@@ -7,9 +7,9 @@
         "Telegram Bot",
         "mega.nz bot"
     ],
-    "website": "https://t.me/NexaBotsUpdates",
-    "repository": "https://github.com/Itz-fork/Mega.nz-Bot",
-    "success_url": "https://t.me/NexaBotsUpdates",
+    "website": "https://t.me/dto_Resmi2021",
+    "repository": "https://github.com/XelilTurk/Mega.nz-Bot",
+    "success_url": "https://t.me/dtoResmi2021",
     "env": {
         "APP_ID": {
             "description": "Your APP_ID from my.telegram.org",

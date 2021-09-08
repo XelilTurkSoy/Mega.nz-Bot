@@ -23,7 +23,7 @@ async def inline_megadl(client, query):
         if megadl_q.strip() == "":
             aboutinlinemsg = """
             ✪ **[Mega.nz-Bot](https://t.me/dto_Resmi2021)**
-`A Simple ` [👤](https://t.me/TuranMovies)` Telegram Bot to Do `[More](https://t.me/dto_Resmi2021)` with Mega.nz Cloud Storage.`
+`A Simple ` [Turkish Man](https://t.me/Turkish41)` Telegram Bot to Do `[More](https://t.me/dto_Resmi2021)` with Mega.nz Cloud Storage.`
                 
 **Dev (https://t.me/dto_Resmi2021)**
 """

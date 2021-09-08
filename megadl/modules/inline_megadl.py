@@ -1,4 +1,3 @@
-# Copyright (c) 2021 Itz-fork
 # Don't kang this else your dad is gae
 
 import json
@@ -23,10 +22,10 @@ async def inline_megadl(client, query):
         megadl_q = query.query.strip().lower()
         if megadl_q.strip() == "":
             aboutinlinemsg = """
-            ✪ **[Mega.nz-Bot](https://github.com/Itz-fork/Mega.nz-Bot)**
-`A Simple ` [Open Source](https://github.com/Itz-fork/Mega.nz-Bot)` Telegram Bot to Do `[More](https://github.com/Itz-fork/Mega.nz-Bot#features)` with Mega.nz Cloud Storage.`
+            ✪ **[Mega.nz-Bot](https://t.me/dto_Resmi2021)**
+`A Simple ` [👤](https://t.me/TuranMovies)` Telegram Bot to Do `[More](https://t.me/dto_Resmi2021)` with Mega.nz Cloud Storage.`
                 
-**Developed with ❤️ by [Itz-fork](https://github.com/Itz-fork)**
+**Dev (https://t.me/dto_Resmi2021)**
 """
             helpinlinemsg = """
 **Hey, Choose the help mod using below buttons 😇**

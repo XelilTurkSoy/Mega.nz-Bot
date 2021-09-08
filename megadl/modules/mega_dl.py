@@ -37,12 +37,12 @@ GITHUB_REPO=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Source Code 🗂", url="https://github.com/Itz-fork/Mega.nz-Bot"
+                        "Dto", url="https://t.me/dto_Resmi2021"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Support Group 🆘", url="https://t.me/Nexa_bots"
+                        "👤Support 🆘", url="https://t.me/turkish41"
                     )
                 ]
             ]
@@ -73,7 +73,7 @@ async def megadl(megabot: Client, message: Message):
     try:
         if Config.IS_PUBLIC_BOT == "False":
             if message.from_user.id not in Config.AUTH_USERS:
-                await message.reply_text("**Sorry this bot isn't a Public Bot 🥺! But You can make your own bot ☺️, Click on Below Button!**", reply_markup=GITHUB_REPO)
+                await message.reply_text("**Sorry this bot isn't a Public Bot 🥺!", reply_markup=GITHUB_REPO)
                 return
             elif Config.IS_PUBLIC_BOT == "True":
                 pass
@@ -137,7 +137,7 @@ async def megadl(megabot: Client, message: Message):
         if not guessedfilemime.mime:
             await download_msg.edit("**Trying to Upload Now!** \n\n**Error:** `Can't Get File Mime Type! Sending as a Document!`")
             await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** \n\n")
             shutil.rmtree(basedir + "/" + userpath)
             return
         filemimespotted = guessedfilemime.mime
@@ -145,14 +145,14 @@ async def megadl(megabot: Client, message: Message):
         if "image/gif" in filemimespotted:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_animation(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded**")
             shutil.rmtree(basedir + "/" + userpath)
             return
         # Checking if it's a image
         if "image" in filemimespotted:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_photo(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded**")
         # Checking if it's a video
         elif "video" in filemimespotted:
             await download_msg.edit("`Generating Data...`")
@@ -161,17 +161,17 @@ async def megadl(megabot: Client, message: Message):
             thumbnail_path = f"{alreadylol}/thumbnail.jpg"
             subprocess.call(['ffmpeg', '-i', magapylol, '-ss', '00:00:00.000', '-vframes', '1', thumbnail_path])
             await message.reply_video(magapylol, duration=vidduration, thumb=thumbnail_path, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** ")
         # Checking if it's a audio
         elif "audio" in filemimespotted:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_audio(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded**")
         # If it's not a image/video or audio it'll reply it as doc
         else:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** ")
     try:
         shutil.rmtree(basedir + "/" + userpath)
         print("Successfully Removed Downloaded File and the folder!")
@@ -185,7 +185,7 @@ async def megadl(megabot: Client, message: Message):
 async def nomegaurl(_, message: Message):
   # Auth users only
     if message.from_user.id not in Config.AUTH_USERS:
-        await message.reply_text("**Sorry this bot isn't a Public Bot 🥺! But You can make your own bot ☺️, Click on Below Button!**", reply_markup=GITHUB_REPO)
+        await message.reply_text("**Sorry this bot isn't a Public Bot 🥺! ", reply_markup=GITHUB_REPO)
         return
     else:
       await message.reply_text("Sorry, I can't find a **valid mega.nz url** in your message! Can you check it again? \n\nAlso Make sure your url **doesn't** contain `mega.co.nz`. \n\n**If there is,** \n - Open that url in a web-browser and wait till webpage loads. \n - Then simply copy url of the webpage that you're in \n - Try Again")

@@ -1,5 +1,5 @@
 # Mega.nz-Bot
-A Simple Telegram Bot written in Python using Pyrogram Library to Do [Somethings](https://github.com/Itz-fork/Mega.nz-Bot#features) Related to [Mega.nz](https://mega.nz/) Cloud Storage.
+A Simple Telegram Bot written in Python using Pyrogram Library to Do [Somethings](https://github.com/XelilTurkSoy/Mega.nz-Bot#features) Related to [Mega.nz](https://mega.nz/) Cloud Storage.
 
 # Features
 - All Mega.nz File Links supported
@@ -29,7 +29,7 @@ Deploy your own Bot ♥️! **Star 🌟 Fork 🍴 and Deploy**
 - `MEGA_PASSWORD` - Fill this if you want to use your own Mega Account. This is your Mega account Password
 
 ### With Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Itz-fork/Mega.nz-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/XelilTurkSoy/Mega.nz-Bot)
 
 ### With VPS/PC
 

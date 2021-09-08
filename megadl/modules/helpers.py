@@ -122,7 +122,7 @@ ABUT_BUTTONS=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Source Code 🗂", url="https://github.com/Itz-fork/Mega.nz-Bot"
+                        "DTO ☪️", url="https://t.me/dto_resmi2021"
                     )
                 ],
                 [

@@ -1,4 +1,4 @@
-# Copyright (c) 2021 Itz-fork
+
 # Don't kang this else your dad is gae
 
 import json
@@ -56,7 +56,7 @@ def USER_ACC_INFO():
 @Client.on_message(filters.command("info") & filters.private)
 async def accinfo(client: Client, message: Message):
   if message.from_user.id not in Config.AUTH_USERS:
-    await message.reply_text("**Sorry this bot isn't a Public Bot 🥺! But You can make your own bot ☺️, Click on Below Button!**", reply_markup=GITHUB_REPO)
+    await message.reply_text("**Sorry this bot isn't a Public Bot 🥺 ", reply_markup=GITHUB_REPO)
     return
   acc_info_msg = await message.reply_text("`Processing ⚙️...`")
   if email and password is None:
@@ -84,7 +84,7 @@ async def uptomega(client: Client, message: Message):
   the_uid = message.from_user.id
   the_cid = message.chat.id
   if the_uid not in Config.AUTH_USERS:
-    await message.reply_text("**Sorry this bot isn't a Public Bot 🥺! But You can make your own bot ☺️, Click on Below Button!**", reply_markup=GITHUB_REPO)
+    await message.reply_text("**Sorry this bot isn't a Public Bot 🥺", reply_markup=GITHUB_REPO)
     return
   megauplaod_msg = await message.reply_text("`Processing ⚙️...`")
   if email and password is None:
@@ -109,7 +109,7 @@ async def uptomega(client: Client, message: Message):
         loop = get_running_loop()
         await loop.run_in_executor(None, partial(UploadToMega, toupload, megaupmsg, the_uid, the_cid, direct_url=url))
         link = public_link
-        await megaupmsg.edit(f"**Successfully Uploaded To Mega.nz** \n\n**Link:** `{link}` \n\n**Powered by @NexaBotsUpdates**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Mega.nz Link 📥", url=f"{link}")]]))
+        await megaupmsg.edit(f"**Successfully Uploaded To Mega.nz** \n\n**Link:** `{link}`", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Mega.nz Link 📥", url=f"{link}")]]))
         os.remove(toupload)
       return
     except Exception as e:
@@ -126,7 +126,7 @@ async def uptomega(client: Client, message: Message):
     loop = get_running_loop()
     await loop.run_in_executor(None, partial(UploadToMega, toupload, megaupmsg))
     link = public_link
-    await megaupmsg.edit(f"**Successfully Uploaded To Mega.nz** \n\n**Link:** `{link}` \n\n**Powered by @NexaBotsUpdates**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Mega.nz Link 📥", url=f"{link}")]]))
+    await megaupmsg.edit(f"**Successfully Uploaded To Mega.nz** \n\n**Link:** `{link}` ", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Mega.nz Link 📥", url=f"{link}")]]))
     os.remove(toupload)
   except Exception as e:
     await megaupmsg.edit(f"**Error:** `{e}`")
@@ -169,7 +169,7 @@ async def importurlf(client: Client, message: Message):
       import_file = m.import_public_url(msg_text)
       imported_link = m.get_upload_link(import_file)
       await importing_msg.delete()
-      await message.reply_text(f"**Successfully Imported 😌** \n\n**Link:** `{imported_link}` \n\n**Powered by @NexaBotsUpdates**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Imported Link 📥", url=f"{imported_link}")]]))
+      await message.reply_text(f"**Successfully Imported 😌** \n\n**Link:** `{imported_link}` ", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Imported Link 📥", url=f"{imported_link}")]]))
     except Exception as e:
       await message.reply_text(f"**Error:** `{e}`")
       await send_errors(e=e)
